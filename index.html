@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3 de Java Script </title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Convertir de Unidades</h1>
+        
+        <div class="form-group">
+            <label for="kmInput">Kilometros a Metros</label>
+            <input type="number" id="kmInput" class="form-control" placeholder="Introduce kilómetros">
+            <button class="btn btn-primary mt-2" onclick="convertirKmToM()">Convertir</button>
+            <p id="Kilometros"></p>
+        </div>
+
+        <div class="form-group">
+            <label for="mInput">Metros a Centimetros</label>
+            <input type="number" id="mInput" class="form-control" placeholder="Introduce metros">
+            <button class="btn btn-primary mt-2" onclick="convertirMToCm()">Convertir</button>
+            <p id="Metros"></p>
+        </div>
+
+        <div class="form-group">
+            <label for="ftInput">Pies a Pulgadas</label>
+            <input type="number" id="ftInput" class="form-control" placeholder="Introduce pies">
+            <button class="btn btn-primary mt-2" onclick="convertirFtToInches()">Convertir</button>
+            <p id="Pies"></p>
+        </div>
+
+        <div class="form-group">
+            <label for="yardInput">Yardas a Pulgadas</label>
+            <input type="number" id="yardInput" class="form-control" placeholder="Introduce yardas">
+            <button class="btn btn-primary mt-2" onclick="convertirYardasPulgadas()">Convertir</button>
+            <p id="Yardas"></p>
+        </div>
+    </div>
+
+    <script>
+        function convertirKmToM() {
+            let km = document.getElementById('kmInput').value;
+            let result = km * 1000;
+            document.getElementById('Kilometros').innerText = `${km} Kilometros a Mettros ${result} metros`;
+        }
+
+        function convertirMToCm() {
+            let m = document.getElementById('mInput').value;
+            let result = m * 100;
+            document.getElementById('Metros').innerText = `${m} Metros a Centimetros ${result} centímetros`;
+        }
+
+        function convertirFtToInches() {
+            let ft = document.getElementById('ftInput').value;
+            let result = ft * 12;
+            document.getElementById('Pies').innerText = `${ft} Pies a Pulgadas ${result} pulgadas`;
+        }
+
+        function convertirYardasPulgadas() {
+            let yard = document.getElementById('yardInput').value;
+            let result = yard * 36;
+            document.getElementById('Yardas').innerText = `${yard} yardas son ${result} pulgadas`;
+        }
+    </script>
+</body>
+</html>
